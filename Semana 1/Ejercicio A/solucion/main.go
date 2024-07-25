@@ -58,7 +58,6 @@ func main() {
 			}
 		}
 
-		// Ordenar edades (Bubble Sort corregido)
 		for i := 0; i < len(edades)-1; i++ {
 			for j := 0; j < len(edades)-1-i; j++ {
 				if edades[j] > edades[j+1] {
@@ -67,7 +66,6 @@ func main() {
 			}
 		}
 
-		// Imprimir edades ordenadas
 		for i, edad := range edades {
 			if i > 0 {
 				fmt.Print(" ")
