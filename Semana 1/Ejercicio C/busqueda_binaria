@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    int arr[7] = {1, 2, 3, 4, 5, 6, 7};
+    int n = 7;
+
+    int x;
+    cin >> x;
+
+    int izq = 0, der = n-1;
+
+    while (izq <= der)
+    {                              // mientras no haya llegado al rango unitario
+        int mid = (izq + der) / 2; // calculo el punto medio
+        if (arr[mid] == x)
+        { // si el valor en el punto medio es igual a x
+            cout << "El numero " << x << " se encontro. " << endl;
+            return 0;
+        }
+        if (arr[mid] < x)
+            izq = mid + 1; // me voy al rango de la derecha si el elemento que busco es mayor
+        else
+            der = mid - 1; // me voy al rango de la izquierda si el elemento que busco es menor
+    }
+
+    cout << "No se encontro el numero " << x << endl;
+    return 0;
+}
+
